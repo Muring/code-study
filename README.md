@@ -5,4 +5,4 @@ Study algorithms, codes etc
 - programmers
 - sql
 
-Currently studying C++ again.
+Currently studying C++.
