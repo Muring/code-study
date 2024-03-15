@@ -1,17 +1,14 @@
 #include <vector>
+#include <unordered_map>
+
 using namespace std;
 
 int solution(vector<int> nums)
 {
-    int answer = 0;
-    vector<int> num_count(200001, 0);
+    unordered_map<int, int> hash;
+    
     for(int num : nums) {
-        if(num_count[num] == 0) answer++;
-        
-        if(answer == nums.size() / 2) break;
-            
-        num_count[num]++;
-        
+        hash[num]++;
     }
-    return answer;
+    return min(hash.size(), nums.size() / 2);
 }
