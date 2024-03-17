@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ using namespace std;
 
 int solution(vector<vector<string>> clothes) {
     int answer = 1;
-    map<string, int> m;
+    unordered_map<string, int> m;
 
     // map에서 초기화를 하지 않고 ++을 하는 경우에는 자동으로 0으로 초기화 된 후 ++연산이 진행된다.
     for(auto cloth : clothes)
