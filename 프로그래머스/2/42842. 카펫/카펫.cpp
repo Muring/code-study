@@ -3,8 +3,6 @@
 
 using namespace std;
 
-using namespace std;
-
 vector<int> solution(int brown, int yellow) {
     vector<int> answer;
 
