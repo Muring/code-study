@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// set을 사용해 소수 중복 체크
 set<int> answer;
 
 bool CheckPrime(int num) {
@@ -15,7 +16,6 @@ bool CheckPrime(int num) {
             if(num % idx == 0) return 0;
         }
     }
-    
     return 1;
 }
 
@@ -31,7 +31,6 @@ int solution(string numbers) {
                 answer.insert(stoi(numbers.substr(0, idx + 1)));
         }
     } while (next_permutation(numbers.begin(), numbers.end()));
-    
     
     return answer.size();
 }
