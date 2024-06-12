@@ -18,9 +18,9 @@ public class Solution {
     }
 
     static Queue<Truck> bridgeQueue = new LinkedList<>();    // 다리에 올라오는 트럭을 저장할 큐
-    static int currentBridgeWeight = 0;
-    static int truckIdx = 0;
-    static int answer = 0;
+    static int currentBridgeWeight = 0; // 현재 다리에 하중된 무게
+    static int truckIdx = 0; // 현재 트럭 번호
+    static int answer = 0; // 현재까지 걸린 초
 
     // 다리에 다음 트럭 올리는 메소드
     public static void newTruckToBridge(int weight) {
