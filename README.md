@@ -5,4 +5,4 @@ Study algorithms, codes etc
 - programmers
 - sql
 
-Currently studying C++.
+with Java, Kotlin and C++
