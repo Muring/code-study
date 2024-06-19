@@ -12,7 +12,8 @@ public class Main {
 
         String str;
         while((str = br.readLine()) != null) {
-            System.out.println(str);
+            sb.append(str).append("\n");
         }
+        System.out.println(sb);
     }
 }
