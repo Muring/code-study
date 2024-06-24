@@ -7,12 +7,14 @@ public class Main {
     static BufferedReader br;
     static StringTokenizer st;
 
+    // 계수 저장 메서드
     private static void coefficient(StringTokenizer st, int[] arr) {
         for (int idx = 0; idx < 3; idx++) {
             arr[idx] = Integer.parseInt(st.nextToken());
         }
     }
 
+    // 방정식 값이 0인지 확인하는 메서드
     private static boolean runEquation(int[] arr, int x, int y) {
         return arr[0] * x + arr[1] * y - arr[2] == 0;
     }
@@ -27,6 +29,7 @@ public class Main {
         coefficient(st, arr1);
         coefficient(st, arr2);
 
+        // 이차 방정식 실행
         for (int xIndex = -999; xIndex < 1000; xIndex++) {
             for (int yIndex = -999; yIndex < 1000; yIndex++) {
                 if (runEquation(arr1, xIndex, yIndex) && runEquation(arr2, xIndex, yIndex)) {
