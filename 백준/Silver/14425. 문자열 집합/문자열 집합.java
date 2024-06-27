@@ -8,12 +8,11 @@ public class Main {
     static StringBuilder sb;
     static StringTokenizer st;
 
-
-    private static void Solution(List<String> set, String[] arr) {
+    private static void Solution(Map<String, Integer> map, int laps) throws IOException {
         int count = 0;
 
-        for (String str : arr) {
-            if (set.contains(str)) count++;
+        for (int idx = 0; idx < laps; idx++) {
+            if (map.containsKey(br.readLine().trim())) count++;
         }
         System.out.println(count);
     }
@@ -25,17 +24,13 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         int baseCount = Integer.parseInt(st.nextToken());
         int checkCount = Integer.parseInt(st.nextToken());
-        List<String> baseSet = new ArrayList<>();
-        String[] checkArr = new String[checkCount];
+        Map<String, Integer> baseMap = new HashMap<>();
 
         for (int idx = 0; idx < baseCount; idx++) {
-            baseSet.add(br.readLine());
-        }
-        for (int idx = 0; idx < checkCount; idx++) {
-            checkArr[idx] = br.readLine();
+            baseMap.put(br.readLine(), idx);
         }
 
-        Solution(baseSet, checkArr);
+        Solution(baseMap, checkCount);
     }
 }
 
