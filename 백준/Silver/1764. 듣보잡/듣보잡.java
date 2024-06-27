@@ -16,14 +16,17 @@ public class Main {
         int nonHeardCount = Integer.parseInt(st.nextToken());
         int nonSeenCount = Integer.parseInt(st.nextToken());
 
-        Map<String, Integer> doeMap = new TreeMap<>();
-        Map<String, Integer> resultMap = new TreeMap<>();
+        Map<String, Integer> doeMap = new TreeMap<>();  // 듣도보도 못한 사람 저장 맵
+        Map<String, Integer> resultMap = new TreeMap<>();   // 듣보잡 저장 맵
+
+        // 듣도보도 못한 사람 정보 저장
         for (int idx = 0; idx < nonHeardCount; idx++) {
             String name = br.readLine();
             doeMap.put(name, idx);
         }
 
-        int count = 0;
+        // 듣보잡 인원을 TreeMap에 넣어 자동으로 이름 사전순으로 정렬한다.
+        int count = 0;  // 명 수
         for (int idx = 0; idx < nonSeenCount; idx++) {
             String name = br.readLine();
             if (doeMap.containsKey(name)) {
