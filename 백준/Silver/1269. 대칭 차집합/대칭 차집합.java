@@ -12,9 +12,11 @@ public class Main {
         br = new BufferedReader(new InputStreamReader(System.in));
         sb = new StringBuilder();
 
+        // 범위 받을 필요 없으니 제거
         br.readLine();
         Set<Integer> set = new HashSet<>();
 
+        // 중복된 값이 발생할 경우 해당 값 제거
         for (int idx = 0; idx < 2; idx++) {
             st = new StringTokenizer(br.readLine());
             while (st.hasMoreTokens()) {
@@ -25,6 +27,7 @@ public class Main {
             }
         }
 
+        // 남아있는 사이즈가 답이다.
         System.out.println(set.size());
     }
 }
