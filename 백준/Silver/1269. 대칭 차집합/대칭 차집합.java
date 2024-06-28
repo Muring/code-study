@@ -13,19 +13,19 @@ public class Main {
         sb = new StringBuilder();
 
         br.readLine();
-        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
 
         for (int idx = 0; idx < 2; idx++) {
             st = new StringTokenizer(br.readLine());
             while (st.hasMoreTokens()) {
                 int num = Integer.parseInt(st.nextToken());
-                if (map.containsKey(num)) {
-                    map.remove(num);
-                } else map.put(num, idx);
+                if (set.contains(num)) {
+                    set.remove(num);
+                } else set.add(num);
             }
         }
 
-        System.out.println(map.size());
+        System.out.println(set.size());
     }
 }
 
