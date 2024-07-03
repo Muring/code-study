@@ -10,8 +10,8 @@ public class Main {
 
         br.readLine();
 
-        int a = Integer.parseInt(br.readLine());
-        int b = Integer.parseInt(br.readLine());
+        long a = Integer.parseInt(br.readLine());
+        long b = Integer.parseInt(br.readLine());
         System.out.println(a * b);
     }
 }
