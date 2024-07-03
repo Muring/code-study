@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 public class Main {
     static BufferedReader br;
@@ -10,8 +11,8 @@ public class Main {
 
         br.readLine();
 
-        long a = Integer.parseInt(br.readLine());
-        long b = Integer.parseInt(br.readLine());
-        System.out.println(a * b);
+        BigInteger a = new BigInteger(br.readLine());
+        BigInteger b = new BigInteger(br.readLine());
+        System.out.println(a.multiply(b));
     }
 }
