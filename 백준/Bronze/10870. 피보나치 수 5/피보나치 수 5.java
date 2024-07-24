@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
-        if (num == 0) System.out.println(num);
-        else if (num == 1) System.out.println(num);
+
+        if (num == 0 || num == 1) System.out.println(num);
         else System.out.println(fibonacci(num, 0, 1));
     }
 }
